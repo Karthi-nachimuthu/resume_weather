@@ -13,7 +13,8 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     } else {
         document.getElementById("error-message").innerText = "Invalid username or password";
     }
-}
+}); // ✅ Added closing parenthesis here
+
 async function fetchWeather() {
     const city = document.getElementById('city').value;
     if (!city) {
@@ -22,7 +23,7 @@ async function fetchWeather() {
     }
 
     const apiKey = "2e5437c4b5f53c0daaf088427516d505"; // Replace with actual API key
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`;
+    const apiUrl = https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric;
 
     console.log("Fetching URL:", apiUrl); // Debugging
 
@@ -41,11 +42,12 @@ async function fetchWeather() {
         console.error("Error fetching weather data:", error);
     }
 }
+
 function displayWeather(data) {
     const weatherContainer = document.getElementById("weather");
 
     if (data.cod !== 200) {
-        weatherContainer.innerHTML = `<p>${data.message}</p>`;
+        weatherContainer.innerHTML = <p>${data.message}</p>;
         return;
     }
 
@@ -54,4 +56,4 @@ function displayWeather(data) {
         <p>Temperature: ${data.main.temp}°C</p>
         <p>Weather: ${data.weather[0].description}</p>
     `;
-})
+} // ✅ Fixed incorrect closing
