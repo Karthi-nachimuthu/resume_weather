@@ -13,7 +13,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     } else {
         document.getElementById("error-message").innerText = "Invalid username or password";
     }
-})
+}
 async function fetchWeather() {
     const city = document.getElementById('city').value;
     if (!city) {
@@ -54,4 +54,4 @@ function displayWeather(data) {
         <p>Temperature: ${data.main.temp}°C</p>
         <p>Weather: ${data.weather[0].description}</p>
     `;
-}
+})
