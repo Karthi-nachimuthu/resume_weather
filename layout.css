@@ -13,6 +13,8 @@ body {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
+    width: 300px; /* Set a specific width for consistency */
+    padding: 20px;
 }
 
 /* Logo Styling */
@@ -24,12 +26,13 @@ body {
 
 /* Input Fields */
 input {
-    width: 90%;
+    width: calc(100% - 22px); /* Adjust width for padding and border */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    box-sizing: border-box; /* Include padding and border in width calculation */
 }
 
 /* Labels */
@@ -42,7 +45,7 @@ label {
 
 /* Login Button */
 button {
-    width: 100%;
+    width: 100%; /* Make button full width of container */
     padding: 12px;
     background: linear-gradient(to right, #ff416c, #ff4b2b);
     color: white;
@@ -52,6 +55,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    box-sizing: border-box; /* Include padding and border in width calculation */
 }
 
 /* Hover Effect */
@@ -71,8 +75,13 @@ button:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Set a specific width for consistency */
+    margin-top: 20px; /* Add margin to separate from login container */
 }
-input, button {
-    margin: 10px;
+
+.container input, .container button {
+    width: calc(100% - 22px); /* Adjust width for padding and border */
+    margin: 10px 0;
     padding: 10px;
+    box-sizing: border-box; /* Include padding and border in width calculation */
 }
