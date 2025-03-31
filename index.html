@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login / Weather App</title>
     <link rel="stylesheet" href="layout.css">
+    <style>
+        /* Styles for weather app elements, initially hidden */
+        #weather-container {
+            display: none; /* Initially hide the weather container */
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="login-container">
-        <img src="images/logo.png" alt="Logo" class="logo">
+    <div class="login-container" id="loginContainer">
+        <img src="logo.png" alt="Logo" class="logo">
         <h2>Welcome Back</h2>
-
         <form id="loginForm">
             <label for="username">Username</label>
             <input type="text" id="username" placeholder="Enter Username" required>
-
             <label for="password">Password</label>
             <input type="password" id="password" placeholder="Enter Password" required>
-
             <button type="submit">Login</button>
         </form>
         <p id="error-message"></p>
     </div>
 
+    <div class="container" id="weather-container">
+        <h1>Weather App</h1>
+        <input type="text" id="city" placeholder="Enter city name">
+        <button onclick="fetchWeather()">Get Weather</button>
+        <div id="weather"></div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="weather.js"></script>
 </body>
 </html>
