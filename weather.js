@@ -32,6 +32,8 @@ function displayWeather(data) {
         weatherContainer.innerHTML = `<p>${data.message}</p>`;
         return;
     }
+function updateWeatherUI(data) {
+    weatherContainer.innerHTML = ""; // Clear existing content
 
     weatherContainer.innerHTML = `
         <h2>Weather in ${data.name}</h2>
