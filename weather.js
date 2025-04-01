@@ -36,6 +36,7 @@ function displayWeather(data) {
     weatherContainer.innerHTML = `
         <h2>Weather in ${data.name}</h2>
         <p>Temperature: ${data.main.temp}°C</p>
+        <p>Pressuer: ${data.main.pressuer}ppm</p>
         <p>Weather: ${data.weather[0].description}</p>
     `;
 }
