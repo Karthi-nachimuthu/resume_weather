@@ -26,7 +26,7 @@ async function fetchWeather() {
     }
 }
 function displayWeather(data) {
-    const weatherContainer = document.getElementById("weather");
+    const weatherContainer = document.getElementById("weather-container");
 
     if (data.cod !== 200) {
         weatherContainer.innerHTML = `<p>${data.message}</p>`;
