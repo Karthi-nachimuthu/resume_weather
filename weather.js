@@ -34,7 +34,7 @@ function displayWeather(data) {
     }
 }
 function updateWeatherUI(data) {
-    const weatherContainer
+    const weatherContainer = document.getElementById("weather-container");
 
     weatherContainer.innerHTML = `
         <h2>Weather in ${data.name}</h2>
