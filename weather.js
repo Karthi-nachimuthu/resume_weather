@@ -16,10 +16,10 @@ async function fetchWeather() {
 
         console.log("API Response:", data); // Debugging
 
-        if (data.cod === "404") {
+        if (data.code === "404") {
             alert("City not found. Please check the spelling.");
         } else {
-            displayWeather(data);
+            updateWeatherUI(data);
         }
     } catch (error) {
         console.error("Error fetching weather data:", error);
@@ -28,7 +28,7 @@ async function fetchWeather() {
 function displayWeather(data) {
     const weatherContainer = document.getElementById("weather");
 
-    if (data.cod !== 200) {
+    if (data.code !== 200) {
         weatherContainer.innerHTML = `<p>${data.message}</p>`;
         return;
     }
