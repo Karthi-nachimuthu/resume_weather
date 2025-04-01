@@ -41,3 +41,4 @@ function updateWeatherUI(data) {
         <p>Weather: ${data.weather[0].description}</p>
     `;
 }
+}
